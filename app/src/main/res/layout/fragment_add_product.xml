@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.AddProduct"
+    android:orientation="vertical">
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Product details"
+        android:textSize="@dimen/_20ssp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_55sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:hint="Product Type"
+        android:layout_margin="@dimen/_2sdp"
+        app:hintTextColor="@color/lightBlue"
+        app:boxStrokeWidth="@dimen/_2sdp"
+        app:boxStrokeColor="@color/darkBlue"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <AutoCompleteTextView
+            android:id="@+id/autoComplete"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:inputType="none"
+            android:layout_marginVertical="@dimen/_25sdp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:padding="@dimen/_2sdp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        app:hintTextColor="@color/lightBlue"
+        app:boxStrokeWidth="@dimen/_2sdp"
+        app:boxStrokeColor="@color/darkBlue"
+        
+        android:layout_margin="@dimen/_5sdp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editProductName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:hint="Product Name"
+            android:padding="@dimen/_2sdp"
+            android:inputType="textAutoCorrect" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        app:hintTextColor="@color/lightBlue"
+        app:boxStrokeWidth="@dimen/_2sdp"
+        app:boxStrokeColor="@color/darkBlue"
+        android:layout_margin="@dimen/_5sdp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editPrice"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:hint="Price"
+            android:inputType="numberDecimal"
+            android:padding="@dimen/_2sdp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        app:hintTextColor="@color/lightBlue"
+        app:boxStrokeWidth="@dimen/_2sdp"
+        app:boxStrokeColor="@color/darkBlue"
+        android:layout_margin="@dimen/_5sdp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTax"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:hint="Tax"
+            android:inputType="numberDecimal"
+            android:padding="@dimen/_2sdp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/submitData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_25sdp"/>
+
+
+</LinearLayout>
