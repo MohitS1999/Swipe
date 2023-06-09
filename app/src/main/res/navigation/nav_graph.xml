@@ -18,5 +18,9 @@
         android:id="@+id/addProduct"
         android:name="com.example.swipe.ui.AddProduct"
         android:label="fragment_add_product"
-        tools:layout="@layout/fragment_add_product" />
+        tools:layout="@layout/fragment_add_product" >
+        <action
+            android:id="@+id/action_addProduct_to_showProduct"
+            app:destination="@id/showProduct" />
+    </fragment>
 </navigation>

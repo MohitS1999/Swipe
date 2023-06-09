@@ -75,13 +75,14 @@ class ShowProduct : Fragment() {
         viewModel.getData.observe(viewLifecycleOwner){
             when(it){
                 is UiState.Success -> {
+                    binding.progressBar.visibility = View.GONE
                     Log.d(TAG, "onViewCreated: Success")
                     dataList = it.data
                     Log.d(TAG, "onViewCreated: $dataList")
                     updateRecyclerView()
                 }
                 is UiState.Loading -> {
-                    Log.d(TAG, "onViewCreated: Loading")
+                    binding.progressBar.visibility = View.VISIBLE
                 }
                 is UiState.Failure -> {
                     Log.d(TAG, "onViewCreated: Failure")

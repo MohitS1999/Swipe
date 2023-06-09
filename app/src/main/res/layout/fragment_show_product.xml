@@ -19,6 +19,20 @@
         app:layout_constraintStart_toStartOf="parent"
         android:focusableInTouchMode="true"/>
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/lightBlue"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/lightBlue"
+        android:visibility="gone"/>
+
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/productListRV"

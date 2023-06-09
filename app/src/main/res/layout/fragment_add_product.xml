@@ -17,94 +17,154 @@
         android:textStyle="bold"
         android:layout_marginTop="@dimen/_15sdp"
         android:paddingStart="12dp"
-        android:paddingEnd="12dp"/>
+        android:paddingEnd="12dp"
+        android:textColor="@color/darkBlue"/>
 
 
-    <com.google.android.material.textfield.TextInputLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_55sdp"
-        android:layout_marginTop="@dimen/_15sdp"
-        android:hint="Product Type"
-        android:layout_margin="@dimen/_2sdp"
-        app:hintTextColor="@color/lightBlue"
-        app:boxStrokeWidth="@dimen/_2sdp"
-        app:boxStrokeColor="@color/darkBlue"
-
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
-        <AutoCompleteTextView
-            android:id="@+id/autoComplete"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_40sdp"
-            android:inputType="none"
-            android:layout_marginVertical="@dimen/_25sdp"
-            android:layout_gravity="center"
-            android:textStyle="bold"
-            android:padding="@dimen/_2sdp"/>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_45sdp"
-        app:hintTextColor="@color/lightBlue"
-        app:boxStrokeWidth="@dimen/_2sdp"
-        app:boxStrokeColor="@color/darkBlue"
-        
-        android:layout_margin="@dimen/_5sdp"
-        >
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editProductName"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_30sdp"
-            android:hint="Product Name"
-            android:padding="@dimen/_2sdp"
-            android:inputType="textAutoCorrect" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_45sdp"
-        app:hintTextColor="@color/lightBlue"
-        app:boxStrokeWidth="@dimen/_2sdp"
-        app:boxStrokeColor="@color/darkBlue"
-        android:layout_margin="@dimen/_5sdp"
-        >
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editPrice"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_30sdp"
-            android:hint="Price"
-            android:inputType="numberDecimal"
-            android:padding="@dimen/_2sdp"/>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_45sdp"
-        app:hintTextColor="@color/lightBlue"
-        app:boxStrokeWidth="@dimen/_2sdp"
-        app:boxStrokeColor="@color/darkBlue"
-        android:layout_margin="@dimen/_5sdp"
-        >
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTax"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_30sdp"
-            android:hint="Tax"
-            android:inputType="numberDecimal"
-            android:padding="@dimen/_2sdp"/>
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <Button
-        android:id="@+id/submitData"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Submit"
-        android:layout_gravity="center"
-        android:layout_marginTop="@dimen/_25sdp"/>
+        app:cardElevation="10dp"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="@dimen/_2sdp"
+        app:cardBackgroundColor="@color/white"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+
+        app:cardUseCompatPadding="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                app:hintTextColor="@color/lightBlue"
+                app:boxStrokeWidth="@dimen/_2sdp"
+                app:boxStrokeColor="@color/darkBlue"
+
+                android:layout_margin="@dimen/_5sdp"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editProductName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:hint="Product Name"
+                    android:padding="@dimen/_2sdp"
+                    android:inputType="textAutoCorrect" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                app:hintTextColor="@color/lightBlue"
+                app:boxStrokeWidth="@dimen/_2sdp"
+                app:boxStrokeColor="@color/darkBlue"
+                android:layout_margin="@dimen/_5sdp"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:hint="Price"
+                    android:inputType="numberDecimal"
+                    android:padding="@dimen/_2sdp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                app:hintTextColor="@color/lightBlue"
+                app:boxStrokeWidth="@dimen/_2sdp"
+                app:boxStrokeColor="@color/darkBlue"
+                android:layout_margin="@dimen/_5sdp"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTax"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:hint="Tax"
+                    android:inputType="numberDecimal"
+                    android:padding="@dimen/_2sdp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_55sdp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:hint="Product Type"
+                    android:layout_margin="@dimen/_5sdp"
+                    app:hintTextColor="@color/lightBlue"
+                    app:boxStrokeWidth="@dimen/_2sdp"
+                    app:boxStrokeColor="@color/darkBlue"
+                    android:layout_weight="1"
+
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+                    <AutoCompleteTextView
+                        android:id="@+id/autoComplete"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:inputType="none"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:padding="@dimen/_2sdp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <Button
+                    android:id="@+id/uploadBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:drawableStart="@drawable/upload"
+                    android:text="Upload \nImage"/>
+
+
+            </LinearLayout>
+
+
+
+
+
+
+            <Button
+                android:id="@+id/submitData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:backgroundTint="@color/lightBlue"/>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/lightBlue"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
 
 
 </LinearLayout>

@@ -12,6 +12,7 @@ import com.example.swipe.util.UiState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import retrofit2.Response
 import javax.inject.Inject
 import kotlin.math.log
 
@@ -37,6 +38,7 @@ class ShowProductViewModel @Inject constructor(private val repository:ApiReposit
                 if (it.isSuccessful){
                     _getData.postValue(UiState.Success(it.body()!!))
                 }else{
+
                     Log.d(TAG, "getAllData: ${it.message()}")
                 }
             }
